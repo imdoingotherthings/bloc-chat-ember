@@ -3,6 +3,12 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bloc-chat',
+    firebase: {
+        apiKey: "AIzaSyB7YQKQX7T2nZyk4pQTNGXVxeFgR51s5cw",
+        authDomain: "bloc-chat-ced9f.firebaseapp.com",
+        databaseURL: "https://bloc-chat-ced9f.firebaseio.com",
+        storageBucket: "bloc-chat-ced9f.appspot.com",
+    },
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
