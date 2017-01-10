@@ -20,7 +20,10 @@
         Enter a room name
         <div class="input-group">
           <!-- <input type="text" class="form-control" action="newChatRoom" aria-describedby="basic-addon1"> -->
-          {{input value=room}}
+          {{input value=name placeholder="Room Name"}}
+          {{#each name as |room|}}
+            <div>{{room}}</div>
+          {{/each}}
         </div>
       </div>
       <div class="modal-footer">
