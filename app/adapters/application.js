@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import Ember from 'ember';
 import FirebaseAdapter from 'emberfire/adapters/firebase';
 
 const { inject } = Ember;
