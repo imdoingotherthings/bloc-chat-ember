@@ -1,7 +1,7 @@
 <ul>
   {{#each model as |room|}}
   <a href="" class="rooms">
-    <li>{{room.name}}</li>
+    <li>{{#link-to "rooms.room" room}}{{room.name}}{{/link-to}}</li>
   </a>
   {{/each}}
 </ul>
@@ -31,4 +31,18 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="chatroom">
+  <p>Welcome to {{room.name}}</p>
+  <!-- <div class="messages">
+    <ul>
+      {{#each name in room}}
+        <li>{{#link-to "room2" room}}{{room.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div> -->
+</div>
+<div>
+  {{outlet}}
 </div>
