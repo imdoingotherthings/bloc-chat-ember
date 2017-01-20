@@ -11,7 +11,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Create New Room</h4>
+        <h4 class="modal-title" id="myModalLabel">Create New Room {{room.name}}</h4>
       </div>
       <div class="modal-body">
         Enter a room name
@@ -29,17 +29,6 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="chatroom">
-  <p>Welcome to {{room.name}}</p>
-  <!-- <div class="messages">
-    <ul>
-      {{#each name in room}}
-        <li>{{#link-to "room2" room}}{{room.name}}{{/link-to}}</li>
-      {{/each}}
-    </ul>
-  </div> -->
 </div>
 <div>
   {{outlet}}
