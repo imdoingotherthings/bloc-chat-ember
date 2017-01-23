@@ -1,10 +1,22 @@
 {{#if userName}}
-  <p>yes</p>
+  <p>{{userName}} is logged in</p>
+  <button{{action "logout"}}>Logout</button>
 {{else}}
-  <p>no</p>
+  <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title" id="myModalLabel">Set your User Name</h4>
+     </div>
+     <div class="modal-body">
+       <div class="input-group">
+         {{input value=name placeholder="User Name"}}
+       </div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal" {{action "setUserName" }}>
+         Save
+       </button>
+     </div>
+   </div>
+  </div>
 {{/if}}
-
-<p>There are no cookies stored in local storage</p>
-
-<div>{{allCookies}}</div>
-{{yield}}

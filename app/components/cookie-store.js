@@ -5,11 +5,15 @@ export default Ember.Component.extend({
 
   userName: Ember.computed.reads('cookieMonster.cookies.userName'),
 
-  // userAvailable: Ember.computed('cookieMonster.cookies.userName'), function () {
-  //   this.get('cookieMonster.cookies.userName');
-  // },
-  //   // This is where the modal goes.
-    // If the cookies show that a user has been here, do not
+  actions: {
+    setUserName: function () {
+      this.get('cookieMonster').bake("userName", this.get('name'), 1)
+    },
+
+    logout: function () {
+      this.get('cookieMonster').burn('userName')
+    }
+  },
 
   allCookies: Ember.computed('cookieMonster.cookies', function() {
     return JSON.stringify(this.get('cookieMonster.cookies'));
