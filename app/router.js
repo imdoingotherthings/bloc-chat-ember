@@ -10,7 +10,9 @@ Router.map(function() {
   this.route('landing');
   this.route('rooms', function () {
     this.route('room', { path: ":room_id"});
+    this.route('message', { path: ":message"});
   });
+  this.route('message');
 });
 
 export default Router;
