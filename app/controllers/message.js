@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
         user_name: 'John',
         time_sent: '3:54pm'
       });
-      newRoom.save();
+      message.save();
     }
   }
 });
