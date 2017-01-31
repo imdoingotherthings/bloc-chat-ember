@@ -7,11 +7,11 @@ export default Ember.Component.extend({
 
   actions: {
     setUserName: function () {
-      this.get('cookieMonster').bake("userName", this.get('name'), 1)
+      this.get('cookieMonster').bake("userName", this.get('name'), 1);
     },
 
     logout: function () {
-      this.get('cookieMonster').burn('userName')
+      this.get('cookieMonster').burn('userName');
     }
   },
 
