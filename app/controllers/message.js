@@ -4,12 +4,12 @@ export default Ember.Controller.extend({
   actions: {
     newMessage: function () {
       var message = this.store.createRecord('message', {
-        text: 'Hello',
-        room_id: 'reference',
-        user_name: 'John',
-        time_sent: '3:54pm'
+        text: this.get('text'),
+        room_id: this.get('room'),
+        user_name: this.get('userName'),
+        time_sent: this.get('time')
       });
-      newRoom.save();
+      newMessage.save();
     }
   }
 });
