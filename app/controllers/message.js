@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
         user_name: this.get('userName'),
         time_sent: this.get('time')
       });
-      newMessage.save();
+      message.save();
     }
   }
 });
